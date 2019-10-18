@@ -1,0 +1,77 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+p{
+font-size: 20px;
+  line-height: 1.5;
+
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+  padding-right: 20px;
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration:none;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus, .skip a:active{
+  border: 2px solid black;
+  left: auto;
+  top: auto;
+  height: auto;
+  overflow: auto;
+  margin: 40px;
+  padding: 6px;
+  z-index: 999;
+}
+
+a.skip{
+  top:auto;
+} 
+
+*:focus{
+border: 2px solid black;
+} 
