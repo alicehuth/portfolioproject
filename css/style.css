@@ -15,35 +15,47 @@ body{
 }
 
 h1{
-  font-size: 50px;
+  font-size: 25px;
   line-height: 1;
-  padding: 40px 50px;
+  padding: 40px 60px;
   text-align: center;
 }
 
 h2{
   color:gray;
-  font-size: 25px;
-  padding: 0px 20px;
+  font-size: 23px;
   text-align: center;
   line-height: 20px;
+}
+
+h3{
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  padding: 50px;
+
 }
 
 p{
 font-size: 20px;
 line-height: 1.5;
+padding-bottom: 20px;
 }
 
 p2{
   color:black;
-  font-size: 18px;
+  font-size: 14px;
   grid-column: 2 / 2;
   /* padding: 50px; */
   text-align: center; 
+  align-content: center;
   margin-top: 50px;
-  line-height: 1.5em;
+  margin-bottom: 50px;
+  line-height: 1.5em
   
 }
+
+
 
 nav ul{
   list-style-type: none;
@@ -62,11 +74,11 @@ nav a{
 
 nav a:hover{
   text-decoration: underline;
-  color: lightblue;
+  color: orchid;
 }
 
 #nav_bar ul li a.active-page{
-  color: lightcoral;
+  color: blue;
 }
 
 .skip a{
@@ -103,9 +115,9 @@ footer{
   background-color: black;
   color: white;
   grid-column: 1 / -1;  /* -1 enables the footer to span the whole page, could also be written as 1 / span 3.*/
-  grid-row: 7 / auto;   /*Can you rewrite it?*/
   padding-top: 10px;
   text-align: center;
+  
 }
 
 .container{
@@ -113,7 +125,7 @@ footer{
   display: grid;
   /* grid-row-gap: 15px; */
   /* grid-template-rows: 30px auto auto auto 100px;  */
-  grid-template-columns: 100px 300px 100px;
+  grid-template-columns: 1fr 3fr 1fr;
   width: 100vw; 
   /* padding: 30px; */
 }
@@ -121,29 +133,18 @@ footer{
 
 .nav{
   /*Provided*/
+  font-size: 14px;
+  line-height: 23px;
   background-attachment: fixed;
   background-color: white;
   padding-top: 20px; 
   padding-bottom: 10px;
-  text-align: center;  
-  align-content: center;
-  grid-column: 1 / span 3;
+  text-align: right;  
+  grid-column: 3 / 3; 
   /* grid-row: 1 / span 2; */
 }
 
-.bigicon {
-  font-size: 35px;
-  color: #36A0FF;
-  padding-left:2%;
-}
-form div{
-  display:inline-block;
-  width: 90%;
-}
-button.btn{             /*Why couldn't I just use button?*/
-  display: block;
-  margin: 0 auto;
-}
+
 
 #main{
   background-attachment: fixed; /* Parallax effect */
@@ -151,7 +152,7 @@ button.btn{             /*Why couldn't I just use button?*/
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;        /* Parallax effect */
-  color:black;
+  color: black;
   height: 450px; 
   grid-column: 1 / -1;
   /* grid-row: 1 / span 1; */
@@ -160,7 +161,7 @@ button.btn{             /*Why couldn't I just use button?*/
 
 header p{
   color:black;
-  font-size: 18px;
+  font-size: 14px;
   padding: 20px 80px;
   text-align: center;
 }
@@ -224,7 +225,7 @@ header p{
   display: flex nowrap;
   flex-direction: column;
   justify-content: space-around;
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 div.polaroid {
@@ -237,23 +238,23 @@ div.polaroid {
 
 div.captioncontainer {
   text-align: center;
+  align-content: center;
   padding: 10px 20px;
   
 }
-
 
 .word {
   font-family: 'Quicksand', sans-serif;
 	perspective: 1000px; 
   perspective-origin: 200px 40px;
   text-align: center;
-  padding: 40px;
+  padding-bottom: 40px;
 }
 
 .word span {
 	cursor: pointer;
 	display: inline-block;
-	font-size: 50px;
+	font-size: 70px;
 	user-select: none;
 	line-height: .5;
 }
@@ -351,9 +352,40 @@ div.captioncontainer {
 	}
 }
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=send] {
+  background-color: orangered;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=send]:hover {
+  background-color: orangered;
+}
+
+.form_container {
+  border-radius: 5px;
+  border-color: lightcoral;
+  padding: 120px;
+}
 
 
-@media screen and (min-width: 800px){
+
+
+@media screen and (min-width: 700px){
 
     #photos {
     -moz-column-count:    2;
@@ -361,33 +393,38 @@ div.captioncontainer {
     column-count:         2; 
 
     }
-  
-    .nav{
-      background-color: white;
-      text-align: right;
-      align-content: center;
-      padding-top: 35px;
-      padding-bottom: 35px;
-      grid-column: 1 / -1;
-      /* grid-row: 1 / span 1; */
-    }
 
     .container{
       display: grid;
-      grid-template-columns: 50px auto 500px auto 50px;
+      grid-template-columns: 1fr auto 5fr auto 1fr;
       /* grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; */
     }
 
+  
+    .nav{
+      font-size: 20px;
+      background-attachment: fixed;
+      background-color: white;
+      text-align: right;
+      align-content: right; 
+      padding-top: 35px;
+      padding-bottom: 35px;
+      grid-column: 3 / span 1; 
+      /* grid-row: 1 / span 1; */
+    }
+    
+
+    
     header p{
       color:black;
-      font-size: 18px;
+      font-size: 15px;
       padding: 50px 200px;
       text-align: center;
     }
 
     p2{
       color:black;
-      font-size: 18px;
+      font-size: 20px;
       padding: 15px;
       text-align: center;
       grid-column: 3 / 4;
@@ -420,53 +457,7 @@ div.captioncontainer {
       
     }
 
-    .flip-card {
-      background-color: transparent;
-      width: 100%;
-      height: 100%;
-      border: 1px solid #f1f1f1;
-      perspective: 1000px;
-    
-    }
-    
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-    
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-    
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-    }
-
-    .flip-card-front {
-      background-color: #bbb;
-      color: black;
-    }
-    
-    /* Style the back side */
-    .flip-card-back {
-      background-color: dodgerblue;
-      color: white;
-      transform: rotateY(180deg);
-    }
-    
-  }
-  /* .placecontainer{
-    display: flex nowrap;
-    flex-direction: column;
-    justify-content: center;
-  } */
+  
 
   @media (min-width: 1000px) {
     #photos {
@@ -474,6 +465,85 @@ div.captioncontainer {
     -webkit-column-count: 3;
     column-count:         3;
     }
+
+    .nav{
+      font-size: 18px;
+      background-attachment: fixed;
+      background-color: white;
+      text-align: right;
+      align-content: right; 
+      padding-top: 35px;
+      padding-bottom: 35px;
+      grid-column: 3 / -1;
+      /* grid-row: 1 / span 1; */
+    }
+
+    h1{
+      font-size: 40px;
+      line-height: 1;
+      padding: 40px 50px;
+      text-align: center;
+    }
+    
+    .container{
+      display: grid;
+      grid-template-columns: 1fr auto 5fr auto 1fr;
+      /* grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; */
+    }
+
+    /* p2{
+      color:black;
+      font-size: 30px;
+      grid-column: 2 / 2;
+      /* padding: 50px; */
+      /* text-align: center; 
+      align-content: center;
+      margin-top: 50px;
+      margin-bottom: 25px;
+      
+    } */ 
+
+    header p{
+      color:black;
+      font-size: 20px;
+      padding: 50px 200px;
+      text-align: center;
+    }
+
+    p2{
+      color:black;
+      font-size: 18px;
+      padding: 15px;
+      text-align: center;
+      grid-column: 3 / 4;
+
+    }
+
+    div.polaroid {
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 25px;
+      
+    }
+
+    #berkphotos{
+      -moz-column-count:    2;
+      -webkit-column-count: 2;
+      column-count:         2; 
+      padding: 80px 150px 150px 150px;
+      line-height: 2;
+      column-gap: 35px; 
+  
+    } 
+
+    div.captioncontainer {
+      text-align: center;
+      font-size: 20px;
+      padding: 20px 10px;
+      
+    }
+
   }
 
 
@@ -496,4 +566,7 @@ div.captioncontainer {
   .skip a:focus{
     top:0;
   }
+}
+
+
 }
