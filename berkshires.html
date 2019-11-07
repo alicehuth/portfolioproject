@@ -1,38 +1,125 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-        <!DOCTYPE html>
-        <html lang="en" dir="ltr">
-          <head>
-            <meta charset="utf-8">
-            <link rel="stylesheet" type="text/css" href="css/html5reset.css">
-            <link rel="stylesheet" type="text/css" href="css/style.css">
-            <title>New Company Inc.</title>
-          </head>
-          <body>
-            <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <div class="container">
-            <div class="nav">
-              <nav>
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="berkshires.html">Berkshires</a></li>
-                  <li><a href="maine.html">Maine</a></li> 
-                  <li><a href="michigan.html">Michigan</a></li>  
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </nav>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <title>HOME</title>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="container">
+    <div class="nav">
+        <nav>
+            <div id = nav_bar>
+          <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="berkshires.html" class='active-page'>Berkshires</a></li>
+                <li><a href="maine.html">Maine</a></li> 
+                <li><a href="michigan.html">Michigan</a></li>
+                <li><a href="contact.html">Contact</a></li>  
+                
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+          </ul>
+            </nav>
+          </div>
+      <header id="berkshires">
+          <h1>The Berkshires, Massachusetts</h1>
+      </header>
+  
+
+  <p2>The Berkshires is the place I know the best. It feels the most familiar and I associate it with 
+      memories of my childhood, my family, and the first community I consciously became a part of. 
+      These are specific places in the Berkshires that formulate my unique definition of home in this place. </p2>
+  
+    </div>
+
+    <!-- <div class="placecontainer"> -->
+      <section id="berkphotos">
+
+      <div class="polaroid">
+          <img src="images/miles.jpg" alt="miles" style="width:100%">
+          <div class="captioncontainer">
+          <p>Goose Pond</p>
+          </div>
+        </div>
+        
+        <div class="polaroid">
+
+          <img src="images/tova.jpg" alt="tova" style="width:100%">
+          <div class="captioncontainer">
+          <p>Downtown</p>
+          </div>
+        </div>
+
+      </div>
+    
+
+        <div class="polaroid">
+            <img src="images/twoodtwo.jpg" alt="tanglewoodfriends" style="width:100%">
+            <div class="captioncontainer">
+            <p>Tanglewood</p>
+            </div>
+          </div>
+
+
+          <div class="polaroid">
+              <img src="images/momtwo.jpg" alt="mom" style="width:100%">
+              <div class="captioncontainer">
+              <p>The Flower Shop</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+        </section>
+      <!-- </div> -->
+
+      <script>
+          function typeEffect(element, speed) {
+            var text = element.innerHTML;
+            element.innerHTML = "";
             
-<h1>The Berkshires, Massachusetts</h1>
+            var i = 0;
+            var timer = setInterval(function() {
+              if (i < text.length) {
+                element.append(text.charAt(i));
+                i++;
+              } else {
+                clearInterval(timer);
+              }
+            }, speed);
+          }
+          
+          
+          // application
+          var speed = 75;
+          var h1 = document.querySelector('h1');
+          var p = document.querySelector('p');
+          var delay = h1.innerHTML.length * speed + speed;
+          
+          // type affect to header
+          typeEffect(h1, speed);
+          
+          
+          // type affect to body
+          setTimeout(function(){
+            p.style.display = "inline-block";
+            typeEffect(p, speed);
+          }, delay);
+          
 
-<p>The Berkshires is the place I know the best. It feels the most familiar and I associate it with memories of my childhood, my family, and the first community I consciously became a part of. These are specific places in the Berkshires that formulate my unique definition of home in this place. </p>
-
-<h2> Tanglewood</h2>
-
-<h2>The Lake</h2>
-
-<h2>30 Crofut</h2>
-
+      </script>
 </body>
+
+<footer>
+    <p> PLACES I CALL HOME<br/>
+      &copy; Alice Huth - Web Design 2019-2020</p>
+  </footer>
 
 
 </html>

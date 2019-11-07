@@ -1,47 +1,133 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-        <!DOCTYPE html>
-        <html lang="en" dir="ltr">
-          <head>
-            <meta charset="utf-8">
-            <link rel="stylesheet" type="text/css" href="css/html5reset.css">
-            <link rel="stylesheet" type="text/css" href="css/style.css">
-            <title>New Company Inc.</title>
-          </head>
-          <body>
-            <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <div class="container">
-            <div class="nav">
-              <nav>
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="berkshires.html">Berkshires</a></li>
-                  <li><a href="maine.html">Maine</a></li> 
-                  <li><a href="michigan.html">Michigan</a></li>  
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </nav>
-              <body>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HOME</title>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="container">
+    <div class="nav">
+        <nav>
+            <div id = nav_bar>
+          <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="berkshires.html">Berkshires</a></li>
+                <li><a href="maine.html" class='active-page' >Maine</a></li> 
+                <li><a href="michigan.html">Michigan</a></li>
+                <li><a href="contact.html">Contact</a></li>  
+                
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+          </ul>
+            </nav>
+      </div>
 
-                <h1>Bath, Maine</h1>
-<p>Bath, Maine is a place I have visited every summer since I was born. 
-    Every July, we make the five-hour drive up and we cram into a house with my mom’s entire extended family. 
-    Maine has enabled me to foster close relationships with my cousins and my grandfather. 
-    Some of my fondest childhood memories have materialized here through early morning sunrises, 
-    rides on the boat, and long, lazy days spent at Popham beach.</p>
+      <header id="maine">
+          <h1>Bath, Maine</h1>
+          </header>
+  
+
+  <p2>Bath, Maine is a place I have visited every summer since I was born. 
+      Every July, we make the five-hour drive up and we cram into a house with my mom’s entire extended family. 
+      Maine has enabled me to foster close relationships with my cousins and my grandfather. 
+      Some of my fondest childhood memories have materialized here through early morning sunrises, 
+      rides on the boat, and long, lazy days spent at Popham beach.</p2>
+
+    </div>
+
+  <section id="berkphotos">
+
+      <div class="polaroid">
+          <img src="images/witches.jpg" alt="witches" style="width:100%">
+          <div class="captioncontainer">
+          <p>Witches Icecream</p>
+          </div>
+        </div>
+        
+        <div class="polaroid">
+
+          <img src="images/popham.jpg" alt="pophambeach" style="width:100%">
+          <div class="captioncontainer">
+          <p>Popham Beach</p>
+          </div>
+        </div>
+
+      </div>
+    
+
+        <div class="polaroid">
+            <img src="images/ellenboat.jpg" alt="ellenonboat" style="width:100%">
+            <div class="captioncontainer">
+            <p>The Dock</p>
+            </div>
+          </div>
 
 
+          <div class="polaroid">
+              <img src="images/cousins.jpg" alt="cousins" style="width:100%">
+              <div class="captioncontainer">
+              <p>45 Painted Point</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
 
-<h2> The Dock</h2>
 
-<h2> Popham Beach</h2>
-
-<h2> Five Islands </h2>
-
+        </section>
+      <!-- </div> -->
+      <script>
+          function typeEffect(element, speed) {
+            var text = element.innerHTML;
+            element.innerHTML = "";
+            
+            var i = 0;
+            var timer = setInterval(function() {
+              if (i < text.length) {
+                element.append(text.charAt(i));
+                i++;
+              } else {
+                clearInterval(timer);
+              }
+            }, speed);
+          }
+          
+          
+          // application
+          var speed = 75;
+          var h1 = document.querySelector('h1');
+          var p = document.querySelector('p');
+          var delay = h1.innerHTML.length * speed + speed;
+          
+          // type affect to header
+          typeEffect(h1, speed);
+          
+          
+          // type affect to body
+          setTimeout(function(){
+            p.style.display = "inline-block";
+            typeEffect(p, speed);
+          }, delay);
+          
+      </script>
 </body>
+
+<footer>
+    <p> PLACES I CALL HOME<br/>
+      &copy; Alice Huth - Web Design 2019-2020</p>
+  </footer>
 
 
 </html>
 
+
+    
+            
+      
+        
 
 

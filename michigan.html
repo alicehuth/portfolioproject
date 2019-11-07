@@ -1,41 +1,132 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-        <!DOCTYPE html>
-        <html lang="en" dir="ltr">
-          <head>
-            <meta charset="utf-8">
-            <link rel="stylesheet" type="text/css" href="css/html5reset.css">
-            <link rel="stylesheet" type="text/css" href="css/style.css">
-            <title>New Company Inc.</title>
-          </head>
-          <body>
-            <div class="skip"><a href="#main">Skip to Main Content</a></div>
-            <div class="container">
-            <div class="nav">
-              <nav>
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="berkshires.html">Berkshires</a></li>
-                  <li><a href="maine.html">Maine</a></li> 
-                  <li><a href="michigan.html">Michigan</a></li>  
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </nav>
-              <body>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HOME</title>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="container">
+    <div class="nav">
+        <nav>
+            <div id = nav_bar>
+          <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="berkshires.html">Berkshires</a></li>
+                <li><a href="maine.html" >Maine</a></li> 
+                <li><a href="michigan.html" class='active-page'>Michigan</a></li>
+                <li><a href="contact.html">Contact</a></li>  
+                
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+          </ul>
+            </nav>
+      </div>
 
-                <h1>Ann Arbor, Michigan</h1>
-<p>Over the past 2 years, Ann Arbor has evolved into another version of home. I have built lasting relationships with friends, acquired knowledge and perspective through my studies, and created memories from wonderful academic and social experiences. While Michigan wouldn’t feel complete without the people that make it feel like home, these are places that feel distinct to my experience. 
-    </p>
+  <header id="michigan">
+      <h1>Ann Arbor, Michigan</h1>
+      </header>
+    
+            
+<p2>Over the past 2 years, Ann Arbor has evolved into another version of home. 
+  I have built lasting relationships with friends, acquired knowledge and perspective through my studies, 
+  and created memories from wonderful academic and social experiences. While Michigan wouldn’t feel complete 
+  without the people that make it feel like home, these are places that feel distinct to my experience. 
+    </p2>
+
+  </div>
 
 
+</header>
 
-<h2>The Big House</h2>
+<section id="berkphotos">
 
-<h2>Mighty Good</h2>
+    <div class="polaroid">
+        <img src="images/stadiumrun.jpg" alt="stadium" style="width:100%">
+        <div class="captioncontainer">
+        <p>Michigan Stadium</p>
+        </div>
+      </div>
+      
+      <div class="polaroid">
 
-<h2>Crawford</h2>
+        <img src="images/zingermans.jpg" alt="zingermans" style="width:100%">
+        <div class="captioncontainer">
+        <p>Zingermans</p>
+        </div>
+      </div>
 
+    </div>
+  
+
+      <div class="polaroid">
+          <img src="images/nina.jpg" alt="nina" style="width:100%">
+          <div class="captioncontainer">
+          <p>State Street</p>
+          </div>
+        </div>
+
+
+        <div class="polaroid">
+            <img src="images/mightygood.jpg" alt="mightygood" style="width:100%">
+            <div class="captioncontainer">
+            <p>Mighty Good</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+
+
+      </section>
+    <!-- </div> -->
+    <script>
+          function typeEffect(element, speed) {
+            var text = element.innerHTML;
+            element.innerHTML = "";
+            
+            var i = 0;
+            var timer = setInterval(function() {
+              if (i < text.length) {
+                element.append(text.charAt(i));
+                i++;
+              } else {
+                clearInterval(timer);
+              }
+            }, speed);
+          }
+          
+          
+          // application
+          var speed = 75;
+          var h1 = document.querySelector('h1');
+          var p = document.querySelector('p');
+          var delay = h1.innerHTML.length * speed + speed;
+          
+          // type affect to header
+          typeEffect(h1, speed);
+          
+          
+          // type affect to body
+          setTimeout(function(){
+            p.style.display = "inline-block";
+            typeEffect(p, speed);
+          }, delay);
+          
+      </script>
+    
+    
+    
+    </script>
 </body>
+
+<footer>
+  <p> PLACES I CALL HOME<br/>
+    &copy; Alice Huth - Web Design 2019-2020</p>
+</footer>
 
 
 </html>

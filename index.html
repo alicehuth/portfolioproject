@@ -4,33 +4,86 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>New Company Inc.</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HOME</title>
   </head>
   <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <div class="container">
     <div class="nav">
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="berkshires.html">Berkshires</a></li>
-          <li><a href="maine.html">Maine</a></li> 
-          <li><a href="michigan.html">Michigan</a></li>  
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    </div>
-<h1> HOME
-        /hōm/
-        Noun
-        </h1>
-    <h2>“Be it ever so humble, it’s more than just a place. It’s also an idea—one where the heart is.”
-        </h2>
-    <p>I am fascinated by the concept of “home”, and how its meaning adapts to a person’s life based on where they are and who they’re with. Home is so profoundly familiar that we, as humans, often associate it with a feeling. 
+        <div id = nav_bar>
+      <ul> 
+            <li><a href="index.html" class='active-page'>Home</a></li>
+            <li><a href="berkshires.html">Berkshires</a></li>
+            <li><a href="maine.html">Maine</a></li> 
+            <li><a href="michigan.html">Michigan</a></li>
+            <li><a href="contact.html">Contact</a></li>  
 
-            Throughout the course of my life, I have discovered different versions of home: the place I grew up, the place I spend my summers in, and the place I now attend college in. Each home is distinguishable by the relationships I’ve built with people there, but also by the places that comprise them, that have developed sentimental value with time and experience. 
-             </p>
+      </ul>
+        </nav>
+      </div>
+      </div>
+      </div>
+    </div>
+ 
+    <header id="main">
+    <!-- <h1>HOME</h1> -->
+
+    <div class="word">
+        <span>H</span>
+        <span>O</span>
+        <span>M</span>
+        <span>E</span>
+      </div>
+
+    <h2>/hōm/ Noun </h2>
+    <p>
+      Home is so profoundly familiar that we, as humans, often associate it with a feeling. Throughout the course of my life, I have discovered different versions of home: the place I grew up, the place I spend my summers in, and the place where I attend college. Each is distinguishable by the relationships I’ve built and the experiences I've shared. 
+       </p>
+    </header>
+
+    <section id="photos">
+        <img src="images/rocks.jpg" alt="rocks">
+        <img src="images/twood.jpg" alt="tanglewood">
+        <img src="images/arch.jpg" alt="arch">
+        <img src="images/bisquick.jpg" alt="bisquick">
+        <img src="images/max.jpg" alt="max">
+        <img src="images/nina.jpg" alt="nina">
+        <img src="images/mom.jpg" alt="mom">
+        <img src="images/homesnow.jpg" alt="homesnow">
+        <img src="images/goodfriends.jpg" alt="goodfriends">
+        
+    </section>
+
+    <script>
+    let spans = document.querySelectorAll('.word span');
+spans.forEach((span, idx) => {
+	span.addEventListener('click', (e) => {
+		e.target.classList.add('active');
+	});
+	span.addEventListener('animationend', (e) => {
+		e.target.classList.remove('active');
+	});
+	
+	// Initial animation
+	setTimeout(() => {
+		span.classList.add('active');
+	}, 750 * (idx+1))
+});
+    
+    
+    </script>
 
     </body>
+
+
+
+  
+
+    <footer>
+      <p> PLACES I CALL HOME<br/>
+        &copy; Alice Huth - Web Design 2019-2020</p>
+    </footer>
     </html>

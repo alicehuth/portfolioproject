@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="container">
+    <div class="nav">
+            <nav>
+                    <div id = nav_bar>
+                  <ul> 
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="berkshires.html">Berkshires</a></li>
+                        <li><a href="maine.html" >Maine</a></li> 
+                        <li><a href="michigan.html">Michigan</a></li>
+                        <li><a href="contact.html" class='active-page'>Contact</a></li>  
+                        
+                        <!-- <li><a href="contact.html">Contact</a></li> -->
+                  </ul>
+                    </nav>
+      </div>
+  </div>
+
+</header>
+
+<main>
+        <h1>Contact Me</h1>
+    <form class="form-horizontal" method="post">
+        <fieldset>
+            <legend class="text-center header">Your Contact Information</legend>
+    
+            <div class="form-group">
+                <span><i class="fa fa-user bigicon"></i></span>
+                <div>
+                    <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <span><i class="fa fa-user bigicon"></i></span>
+                <div>
+                    <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <span><i class="fa fa-paper-plane bigicon"></i></span>
+                <div>
+                    <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <span><i class="fa fa-phone-square bigicon"></i></span>
+                <div>
+                    <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <span><i class = "fas fa-pencil-alt bigicon"></i></span>
+                <div>
+                    <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days."></textarea>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </main>
+
+    <script>
+            function typeEffect(element, speed) {
+              var text = element.innerHTML;
+              element.innerHTML = "";
+              
+              var i = 0;
+              var timer = setInterval(function() {
+                if (i < text.length) {
+                  element.append(text.charAt(i));
+                  i++;
+                } else {
+                  clearInterval(timer);
+                }
+              }, speed);
+            }
+            
+            
+            // application
+            var speed = 75;
+            var h1 = document.querySelector('h1');
+            var p = document.querySelector('p');
+            var delay = h1.innerHTML.length * speed + speed;
+            
+            // type affect to header
+            typeEffect(h1, speed);
+            
+            
+            // type affect to body
+            setTimeout(function(){
+              p.style.display = "inline-block";
+              typeEffect(p, speed);
+            }, delay);
+            
+  
+        </script>
+    </body>
+    </html>
+
+              
+
+
+
+
+  
+<!-- http://www.prepbootstrap.com/bootstrap-template/contact-form -->
+
+            
