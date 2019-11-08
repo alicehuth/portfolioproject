@@ -2,21 +2,16 @@ html{
     scroll-behavior: smooth;
 }
 
-/* * {
-  box-sizing: border-box;
-} */
-
 body{
   background-color: white;
   font-family:'Quicksand', sans-serif;
   font-size: 18px;
-  margin: 0;
-  /* padding: 1rem; */
+  
 }
 
 h1{
   font-size: 25px;
-  line-height: 1;
+  line-height: 20px;
   padding: 40px 60px;
   text-align: center;
 }
@@ -36,13 +31,7 @@ h3{
 
 }
 
-p{
-font-size: 20px;
-line-height: 1.5;
-padding-bottom: 20px;
-}
-
-p2{
+h4{
   color:black;
   font-size: 14px;
   grid-column: 2 / 2;
@@ -51,11 +40,39 @@ p2{
   align-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
-  line-height: 1.5em
-  
+  line-height: 20px; 
+
 }
 
+header p{
+  color:black;
+  font-size: 14px;
+  padding: 20px 60px 50px 60px;
+  text-align: center;
+}
 
+footer p{
+  color:white;
+  font-size: 14px;
+}
+
+p{
+font-size: 20px;
+line-height: 20px;
+padding-bottom: 10px;
+}
+
+/* p2{
+  color:black;
+  font-size: 14px;
+  grid-column: 2 / 2;
+  /* padding: 50px; */
+  /* text-align: center; 
+  align-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  line-height: 20px; 
+} */ 
 
 nav ul{
   list-style-type: none;
@@ -114,57 +131,38 @@ border: 2px solid black;
 footer{
   background-color: black;
   color: white;
-  grid-column: 1 / -1;  /* -1 enables the footer to span the whole page, could also be written as 1 / span 3.*/
+  grid-column: 1 / -1;  
   padding-top: 10px;
   text-align: center;
-  
 }
 
 .container{
-  /*Provided*/
   display: grid;
-  /* grid-row-gap: 15px; */
-  /* grid-template-rows: 30px auto auto auto 100px;  */
   grid-template-columns: 1fr 3fr 1fr;
   width: 100vw; 
-  /* padding: 30px; */
 }
 
-
 .nav{
-  /*Provided*/
   font-size: 14px;
   line-height: 23px;
   background-attachment: fixed;
   background-color: white;
-  padding-top: 20px; 
+  padding-top: 10px; 
   padding-bottom: 10px;
   text-align: right;  
   grid-column: 3 / 3; 
-  /* grid-row: 1 / span 2; */
 }
-
-
 
 #main{
   background-attachment: fixed; /* Parallax effect */
-  /* background-image: url("../images/dots.png");  */
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;        /* Parallax effect */
   color: black;
   height: 450px; 
   grid-column: 1 / -1;
-  /* grid-row: 1 / span 1; */
-
 }
 
-header p{
-  color:black;
-  font-size: 14px;
-  padding: 20px 80px;
-  text-align: center;
-}
 
 #berkshires{
   background-attachment: fixed; /* Parallax effect */
@@ -175,7 +173,6 @@ header p{
   color: black;
   height: 600px;
   grid-column: 1 / -1;
-  /* grid-row: 1 / span 1; */
 }
 
 #maine{
@@ -187,7 +184,6 @@ header p{
   color: black;
   height: 600px; 
   grid-column: 1 / -1;
-  /* grid-row: 1 / span 1; */
 }
 
 #michigan{
@@ -199,7 +195,18 @@ header p{
   color: black;
   height: 600px; 
   grid-column: 1 / -1;
-  /* grid-row: 1 / span 1; */
+}
+
+#contact{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/boatledge.jpg"); 
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;        /* Parallax effect */
+  color: black;
+  height: 500px;
+  grid-column: 1 / -1;
+
 }
 
 
@@ -225,7 +232,6 @@ header p{
   display: flex nowrap;
   flex-direction: column;
   justify-content: space-around;
-  /* padding: 50px; */
 }
 
 div.polaroid {
@@ -363,7 +369,7 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-input[type=send] {
+input[type=submit] {
   background-color: orangered;
   color: white;
   padding: 12px 20px;
@@ -372,18 +378,14 @@ input[type=send] {
   cursor: pointer;
 }
 
-input[type=send]:hover {
+input[type=submit]:hover {
   background-color: orangered;
 }
 
 .form_container {
   border-radius: 5px;
-  border-color: lightcoral;
-  padding: 120px;
+  padding: 40px;
 }
-
-
-
 
 @media screen and (min-width: 700px){
 
@@ -391,53 +393,53 @@ input[type=send]:hover {
     -moz-column-count:    2;
     -webkit-column-count: 2;
     column-count:         2; 
-
     }
 
     .container{
       display: grid;
       grid-template-columns: 1fr auto 5fr auto 1fr;
-      /* grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; */
     }
 
-  
-    .nav{
-      font-size: 20px;
-      background-attachment: fixed;
-      background-color: white;
-      text-align: right;
-      align-content: right; 
-      padding-top: 35px;
-      padding-bottom: 35px;
-      grid-column: 3 / span 1; 
-      /* grid-row: 1 / span 1; */
+    h1{
+      font-size: 30px;
+      padding: 40px 60px;
+      text-align: center;
     }
-    
 
-    
     header p{
       color:black;
-      font-size: 15px;
-      padding: 50px 200px;
+      font-size: 16px;
+      padding: 50px 150px;
+      line-height: 25px;
       text-align: center;
     }
 
-    p2{
+
+    h4{
       color:black;
-      font-size: 20px;
+      font-size: 18px;
       padding: 15px;
       text-align: center;
-      grid-column: 3 / 4;
-
+      grid-column: 2 / 4;
+      line-height: 30px;
     }
 
+    .nav{
+      font-size: 18px;
+      background-attachment: fixed;
+      background-color: white;
+      text-align: center;
+      align-content: center; 
+      padding-top: 35px;
+      padding-bottom: 35px;
+      grid-column: 2 / span 2; 
+    }
+    
     div.polaroid {
       width: 100%;
       background-color: white;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       margin-bottom: 25px;
-      
-    
     }
 
     #berkphotos{
@@ -447,19 +449,26 @@ input[type=send]:hover {
       padding: 80px 150px 150px 150px;
       line-height: 2;
       column-gap: 35px; 
-  
     } 
 
     div.captioncontainer {
       text-align: center;
       font-size: 20px;
-      padding: 20px 10px;
-      
+      padding: 20px 10px; 
     }
 
-  
+    .form_container {
+      border-radius: 5px;
+      padding: 80px;
+    }
 
   @media (min-width: 1000px) {
+
+    .container{
+      display: grid;
+      grid-template-columns: 1fr auto 5fr auto 1fr;
+    }
+
     #photos {
     -moz-column-count:    3;
     -webkit-column-count: 3;
@@ -475,42 +484,25 @@ input[type=send]:hover {
       padding-top: 35px;
       padding-bottom: 35px;
       grid-column: 3 / -1;
-      /* grid-row: 1 / span 1; */
     }
 
     h1{
-      font-size: 40px;
+      font-size: 30px;
       line-height: 1;
       padding: 40px 50px;
       text-align: center;
     }
     
-    .container{
-      display: grid;
-      grid-template-columns: 1fr auto 5fr auto 1fr;
-      /* grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; */
-    }
-
-    /* p2{
-      color:black;
-      font-size: 30px;
-      grid-column: 2 / 2;
-      /* padding: 50px; */
-      /* text-align: center; 
-      align-content: center;
-      margin-top: 50px;
-      margin-bottom: 25px;
-      
-    } */ 
 
     header p{
       color:black;
-      font-size: 20px;
+      font-size: 16px;
       padding: 50px 200px;
+      line-height: 25px;
       text-align: center;
     }
 
-    p2{
+    h4{
       color:black;
       font-size: 18px;
       padding: 15px;
@@ -541,7 +533,11 @@ input[type=send]:hover {
       text-align: center;
       font-size: 20px;
       padding: 20px 10px;
-      
+    }
+
+    .form_container {
+      border-radius: 5px;
+      padding: 100px;
     }
 
   }
@@ -567,6 +563,4 @@ input[type=send]:hover {
     top:0;
   }
 }
-
-
 }

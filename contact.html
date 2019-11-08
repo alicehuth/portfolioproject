@@ -11,7 +11,8 @@
     <title>Contact Form</title>
   </head>
   <body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+      <main>
+    <div class="skip"><a href="#contactform">Skip to Main Content</a></div>
     <div class="container">
     <div class="nav">
             <nav>
@@ -25,28 +26,27 @@
                         
                         <!-- <li><a href="contact.html">Contact</a></li> -->
                   </ul>
+                </div>
                     </nav>
       </div>
-  </div>
+      <header id="contact">
+            <h1>Contact Me</h1> 
+        </header>
+  
+  <h4>Let's chat! I would love to hear more about the places you call home.</h4>
 
-</header>
+</div>
 
-<h1>Contact Me</h1> 
-
-
-
-    <body>
-
-            <h3>Let's chat! I would love to hear more about the places you call home.</h3>
-            
+            <section id="contactform">
             <div class="form_container">
             <form action="https://formspree.io/mwkkkdwo" method="POST">
-              <form action="/action_page.php">
+              <!-- <form action="/action_page.php"> -->
+
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input type="text" id="fname" name="firstname" placeholder="Your First Name..">
             
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
 
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" placeholder="Your email..">
@@ -58,9 +58,8 @@
 
                 <input type="submit" value="Send">
               </form>
-            </div>
-            
-  </form>
+              </div>   
+  </section>
 
 
     <script>
@@ -82,7 +81,7 @@
             // application
             var speed = 75;
             var h1 = document.querySelector('h1');
-            var p = document.querySelector('p');
+            // var p = document.querySelector('p');
             var delay = h1.innerHTML.length * speed + speed;
             
             // type affect to header
@@ -107,13 +106,15 @@
 
   gtag('config', 'UA-151779955-2');
 </script>
-
-    </body>
+</main>
+    
 
     <footer>
             <p> PLACES I CALL HOME<br/>
               &copy; Alice Huth - Web Design 2019-2020</p>
           </footer>
+
+        </body>
 
     </html>
 
